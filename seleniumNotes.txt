@@ -1,0 +1,112 @@
+Selenium
+
+1)Basics
+->Launch Chrome/Firefox/IE Browser(WebDriver)
+->IDE,GRID,RC
+->Open Application
+->Navigate
+->find(FindElements)-List Emty (FindElement)-No Such Element
+->locate(8 Locators)-id,name,class,xpath,css selector,linktext,partialLinkText,tagName
+->act-sendKeys,click,getText(),isDisplayed()
+->Testing(Verification,validation)(****Assert Statement)
+
+2)Intermediate
+->Switch to windows->driver.switchTo().window(windowid)
+String paratentwind=driver.getWindowHandle();//parent
+Set<String> allwindows=driver.getWindowHandles();//parent child
+Iterator<String> i1=allwindows.iterator();
+while(i1.hasNext())
+{
+System.out.println("Parent"+i1.next());
+String childWindow=i1.next();
+if(!paratentwind.equals(childWindow))
+{
+driver.switchTo().window(childWindow);
+}
+driver.switchTo().window(paratentwind);'=
+}
+
+
+->Switch to Frames->driver.switchTo().frame(id/name/value/webelement)
+->Switch to Alert->Alert alert=driver.switchTo().alert()
+->Keyboard Event  Actions act=new Actions(driver);act.moveTo c
+->Mouse Event
+->Excel sheet
+->wait
+driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
+WebDriverWait wb=new WebDriverWait(driver,10);
+driver.findElement(By.id("btn2")).click();
+wb.until(ExpectedConditions.presenceOfElementLocated(By.id("txt2")));
+->Taking Screenshot
+TakesScreenshot ts=(TakesScreenshot)driver;
+File file=ts.getScreenshotAs(OutputType.FILE);
+FileUtils.copyFile(file, new File("./ScreenshotsBesant/screenCapture.png"));
+
+
+3)Advance***
+->AutoIT
+->Jenkins
+->Grid
+->RC
+->IDE
+->Framework(Cucumber)- Behaviour driven Development
+1)Feature->Login.feature
+2)StepDefinition
+3)Page Package
+4)Test Runner
+
+
+Cucumber dry run is used for compilation of the Step Definition and Feature files and to verify the compilation errors. 
+The value of dry run can be either true or false. The default value of dry run is false and it is a part of the Test Runner Class file.
+
+In case the value of dry run is set to true, Cucumber will verify individual steps in the Feature file and 
+the implementation code of steps in Feature file within the Step Definition file.
+
+A message is thrown, if any of the steps in the Feature file is not implemented in the Step Definition file. 
+
+A dry run parameter is a part of the @CucumberOptions which is used to configure the test settings.
+
+Example
+Implementation of Test Runner Class file
+
+import org.junit.runner.RunWith;
+import cucumber.api.CucumberOptions;
+import cucumber.api.junit.Cucumber;
+@RunWith(Cucumber.class)
+@CucumberOptions(
+   features = "Feature"
+   ,glue={"stepDefinition"}
+   ,strict = true
+   ,dryRun = true
+)
+public class TestRunner {
+}
+
+->Interview Qns and ansers
+
+
+
+java -jar selenium-server-standalone-3.5.0.jar -port 4444 -role hub -nodeTimeout 1000
+
+java -jar C:\Users\Sony\Desktop\Demo\Selenium\Grid\selenium-server-standalone-3.5.0.jar -role node -hub http://192.168.1.4:4444/grid/register/ -browser browserName = firefox -port 5555
+
+http://192.168.1.4:4444
+
+java -Dwebdriver.gecko.driver=C:\Users\Sony\Desktop\Demo\Selenium\Grid\Drivers\geckodriver.exe -jar C:\Users\Sony\Desktop\Demo\Selenium\Grid\selenium-server-standalone-3.5.0.jar -role webdriver -hub http://192.168.1.4:4444/grid/register -browser browserName = firefox,platform = WINDOWS -port 5555
+
+java -Dwebdriver.ie.driver = C:\Users\Sony\Desktop\Demo\Selenium\Grid\Drivers\IEDriverServer.exe -jar C:\Users\Sony\Desktop\Demo\Selenium\Grid\selenium-server-standalone-3.5.0.jar -role webdriver -hub http://192.168.1.4:4444/grid/register -browser browserName = ie,platform = WINDOWS -port 5558
+
+java -Dwebdriver.chrome.driver = C:\Users\Sony\Desktop\Demo\Selenium\Grid\Drivers\chromedriver.exe -jar C:\Users\Sony\Desktop\Demo\Selenium\Grid\selenium-server-standalone-3.5.0.jar -role webdriver -hub http://192.168.1.4:4444/grid/register -browser browserName = ie,platform = WINDOWS -port 5557
+
+
+
+****************************************
+
+java -jar selenium-server-standalone-3.5.0.jar -port 4444 -role hub
+java -Dwebdriver.gecko.driver=C:\Users\Sony\Desktop\Demo\Selenium\Grid\Drivers\geckodriver.exe -jar C:\Users\Sony\Desktop\Demo\Selenium\Grid\selenium-server-standalone-3.5.0.jar -role webdriver -hub http://192.168.43.230:4444/grid/register -browser browserName = firefox,platform = WINDOWS -port 5555
+
+java -Dwebdriver.ie.driver = C:\Users\Sony\Desktop\Demo\Selenium\Grid\Drivers\IEDriverServer.exe -jar C:\Users\Sony\Desktop\Demo\Selenium\Grid\selenium-server-standalone-3.5.0.jar -role webdriver -hub http://192.168.43.230:4444/grid/register -browser browserName = ie,platform = WINDOWS -port 5558
+
+java -Dwebdriver.chrome.driver = C:\Users\Sony\Desktop\Demo\Selenium\Grid\Drivers\chromedriver.exe -jar C:\Users\Sony\Desktop\Demo\Selenium\Grid\selenium-server-standalone-3.5.0.jar -role webdriver -hub http://192.168.43.230:4444/grid/register -browser browserName = chrome,platform = WINDOWS -port 5557
+
+
