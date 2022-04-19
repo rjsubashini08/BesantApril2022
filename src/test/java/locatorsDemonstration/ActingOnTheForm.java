@@ -20,12 +20,12 @@ driver.manage().window().maximize();
 
 driver.get("file:///C:/Users/HP/Downloads/test.html");
 
-Thread.sleep(5000);
-/*
-WebElement usernameBox=driver.findElement(By.name("username"));
+Thread.sleep(2000);
+//ID 
+WebElement usernameBox=driver.findElement(By.id("username"));
 usernameBox.sendKeys("Rajasubashini R");
 Thread.sleep(5000);
-
+/*
 WebElement passwordBox=driver.findElement(By.name("userpass"));
 passwordBox.sendKeys("Password@123");
 Thread.sleep(5000);
