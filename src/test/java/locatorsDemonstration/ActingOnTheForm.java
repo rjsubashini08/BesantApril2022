@@ -21,7 +21,7 @@ driver.manage().window().maximize();
 driver.get("file:///C:/Users/HP/Downloads/test.html");
 
 Thread.sleep(2000);
-//ID 
+//ID ->find locate act
 WebElement usernameBox=driver.findElement(By.id("username"));
 usernameBox.sendKeys("Rajasubashini R");
 Thread.sleep(5000);
