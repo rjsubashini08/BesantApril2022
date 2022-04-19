@@ -9,15 +9,16 @@ import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ActingOnTheForm {
 static WebDriver driver;
-	
-	public static void main(String[] args) throws InterruptedException {
+//https://www.tutorialrepublic.com/html-tutorial/html-forms.php	
+public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sony\\eclipse-workspace\\BesantArtifactFeb\\Drivers\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\eclipse-workspace\\SeleniumMarchBatchProj\\Drivers\\chromedriver.exe");
+
 driver=new ChromeDriver();
 
 driver.manage().window().maximize();
 
-driver.get("file:///C:/Users/Sony/Downloads/FormsTest.html");
+driver.get("file:///C:/Users/HP/Downloads/test.html");
 
 Thread.sleep(5000);
 /*
@@ -61,13 +62,13 @@ Thread.sleep(3000);*/
 
 //Tag Name
 
-List<WebElement> allRows=driver.findElements(By.tagName("tr"));
-int noOfRows=allRows.size();
-System.out.println(noOfRows);
-
-List<WebElement> allRowsImg=driver.findElements(By.tagName("img"));
-int noOfRowsImg=allRowsImg.size();
-System.out.println(noOfRowsImg);
+//List<WebElement> allRows=driver.findElements(By.tagName("tr"));
+//int noOfRows=allRows.size();
+//System.out.println(noOfRows);
+//
+//List<WebElement> allRowsImg=driver.findElements(By.tagName("img"));
+//int noOfRowsImg=allRowsImg.size();
+//System.out.println(noOfRowsImg);
 
 driver.close();
 	}
