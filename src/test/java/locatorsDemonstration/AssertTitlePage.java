@@ -17,11 +17,13 @@ public class AssertTitlePage {
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://example.testproject.io/web/");
-		Thread.sleep(3000);
+		Thread.sleep(5000);
 		driver.findElement(By.xpath("//*[@id='name']")).sendKeys("Raghav");
-		driver.findElement(By.id("password")).sendKeys("12345");
-		driver.findElement(By.id("login")).click();
 		Thread.sleep(3000);
+		driver.findElement(By.id("password")).sendKeys("12345");
+		Thread.sleep(2000);
+		driver.findElement(By.id("login")).click();
+		Thread.sleep(2000);
 		
 		String titleVal=driver.getTitle();
 		System.out.println(titleVal);

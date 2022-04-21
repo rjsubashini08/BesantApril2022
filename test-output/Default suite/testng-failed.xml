@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="seleniumdemonstration.OpenGoogleApplication">
+      <class name="locatorsDemonstration.LinksDemo">
         <methods>
-          <include name="configureBrowser"/>
-          <include name="OpenGoogleAppChromeBrowser"/>
-          <include name="closeApll"/>
+          <include name="Validate"/>
         </methods>
-      </class> <!-- seleniumdemonstration.OpenGoogleApplication -->
+      </class> <!-- locatorsDemonstration.LinksDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -1,5 +1,5 @@
 package locatorsDemonstration;
-package 
+
 
 import java.util.List;
 
@@ -17,7 +17,7 @@ public class LinksDemo {
 	{
 		// TODO Auto-generated method stub
 		//find locate act(sendKeys,Click,getText)
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sony\\eclipse-workspace\\SeleniumDemo\\Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\eclipse-workspace\\SeleniumMarchBatchProj\\Drivers\\chromedriver.exe");
 		driver=new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://example.testproject.io/web/");
