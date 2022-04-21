@@ -3,11 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="locatorsDemonstration.LinksDemo">
+      <class name="locatorsDemonstration.SwitchToWindow">
         <methods>
-          <include name="Validate"/>
+          <include name="launchChromeBrowser"/>
+          <include name="demoSwitchToWindow"/>
+          <include name="closeApp"/>
         </methods>
-      </class> <!-- locatorsDemonstration.LinksDemo -->
+      </class> <!-- locatorsDemonstration.SwitchToWindow -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

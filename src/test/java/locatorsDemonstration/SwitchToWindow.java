@@ -4,6 +4,7 @@ import java.util.Iterator;
 import java.util.Set;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -18,28 +19,31 @@ public class SwitchToWindow {
 	@BeforeTest
 	public void launchChromeBrowser()
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sony\\git\\repository\\BesantMavenArtifact\\src\\test\\resources\\Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\eclipse-workspace\\SeleniumMarchBatchProj\\Drivers\\chromedriver.exe");
 		driver=new ChromeDriver();
 		
 	}
 
 	
 	@Test(priority=1)
-	public void openApplication()
+	public void openApplication() throws InterruptedException
 	{
 		
 		driver.get("https://www.hyrtutorials.com/p/window-handles-practice.html");
 		driver.manage().window().maximize();
-	}
+		Thread.sleep(3000);	}
 	@Test(priority=2)
 	public void demoSwitchToWindow()
 	{
+		JavascriptExecutor js = (JavascriptExecutor) driver; 
+		js.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.id("newWindowBtn")));
 		driver.findElement(By.id("newWindowBtn")).click();
 		String paratentwind=driver.getWindowHandle();
 		System.out.println(driver.getTitle());
 		System.out.println(paratentwind);
 		Set<String> allwindows=driver.getWindowHandles();
 	Iterator<String> i1=allwindows.iterator();
+	//i1 123 456
 	while(i1.hasNext())
 	{
 		System.out.println(i1.next());

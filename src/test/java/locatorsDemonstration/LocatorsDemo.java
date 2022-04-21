@@ -19,7 +19,7 @@ public class LocatorsDemo {
 	@BeforeTest
 	public void configureBrowser() throws InterruptedException
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\r.b.ramamurthy\\eclipse-workspace\\MavenDemSelArtifact\\src\\test\\resources\\driver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\eclipse-workspace\\SeleniumMarchBatchProj\\Drivers\\chromedriver.exe");
 		driver=new ChromeDriver();//Launch the Chrome Browser
 		Thread.sleep(5000);
 		System.out.println("Browser launched");

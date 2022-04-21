@@ -1,17 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-21T07:43:21 IST" name="Default suite" finished-at="2022-04-21T07:43:28 IST" duration-ms="6345">
+  <suite started-at="2022-04-21T08:23:49 IST" name="Default suite" finished-at="2022-04-21T08:24:02 IST" duration-ms="12696">
     <groups>
     </groups>
-    <test started-at="2022-04-21T07:43:21 IST" name="Default test" finished-at="2022-04-21T07:43:28 IST" duration-ms="6345">
-      <class name="locatorsDemonstration.LinksDemo">
-        <test-method signature="Validate()[pri:0, instance:locatorsDemonstration.LinksDemo@77eca502]" started-at="2022-04-21T07:43:21 IST" name="Validate" finished-at="2022-04-21T07:43:28 IST" duration-ms="6317" status="PASS">
+    <test started-at="2022-04-21T08:23:49 IST" name="Default test" finished-at="2022-04-21T08:24:02 IST" duration-ms="12696">
+      <class name="locatorsDemonstration.SwitchToWindow">
+        <test-method is-config="true" signature="launchChromeBrowser()[pri:0, instance:locatorsDemonstration.SwitchToWindow@20f5239f]" started-at="2022-04-21T08:23:49 IST" name="launchChromeBrowser" finished-at="2022-04-21T08:23:50 IST" duration-ms="1173" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Validate -->
-      </class> <!-- locatorsDemonstration.LinksDemo -->
+        </test-method> <!-- launchChromeBrowser -->
+        <test-method signature="openApplication()[pri:1, instance:locatorsDemonstration.SwitchToWindow@20f5239f]" started-at="2022-04-21T08:23:50 IST" name="openApplication" finished-at="2022-04-21T08:23:57 IST" duration-ms="7366" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openApplication -->
+        <test-method signature="demoSwitchToWindow()[pri:2, instance:locatorsDemonstration.SwitchToWindow@20f5239f]" started-at="2022-04-21T08:23:57 IST" name="demoSwitchToWindow" finished-at="2022-04-21T08:24:01 IST" duration-ms="3979" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- demoSwitchToWindow -->
+        <test-method is-config="true" signature="closeApp()[pri:0, instance:locatorsDemonstration.SwitchToWindow@20f5239f]" started-at="2022-04-21T08:24:01 IST" name="closeApp" finished-at="2022-04-21T08:24:02 IST" duration-ms="156" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApp -->
+      </class> <!-- locatorsDemonstration.SwitchToWindow -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
