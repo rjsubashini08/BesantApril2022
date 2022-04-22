@@ -16,7 +16,7 @@ static WebDriver driver;
 	@BeforeTest
 	public void launchBrowser()
 	{
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sony\\git\\repository\\BesantMavenArtifact\\src\\test\\resources\\Drivers\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\eclipse-workspace\\SeleniumMarchBatchProj\\Drivers\\chromedriver.exe");
 		driver=new ChromeDriver();
 		
 	}
@@ -28,8 +28,12 @@ static WebDriver driver;
 		driver.manage().window().maximize();
 		Thread.sleep(3000);
 		driver.switchTo().frame("frm1");
-		
+		Thread.sleep(2000);
+		JavascriptExecutor js=(JavascriptExecutor)driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", driver.findElement(By.xpath("//select[@id='course']")));
+		Thread.sleep(5000);
 		driver.findElement(By.xpath("//select[@id='course']")).click();
+		Thread.sleep(2000);
 		}
 	
 	
