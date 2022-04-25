@@ -3,13 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="locatorsDemonstration.SwitchingToFrame">
+      <class name="dynamicObjects.Ajaxdemo">
         <methods>
-          <include name="validateForms"/>
-          <include name="launchBrowser"/>
-          <include name="closeApplication"/>
+          <include name="test_AjaxExample"/>
+          <include name="setUp"/>
         </methods>
-      </class> <!-- locatorsDemonstration.SwitchingToFrame -->
+      </class> <!-- dynamicObjects.Ajaxdemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

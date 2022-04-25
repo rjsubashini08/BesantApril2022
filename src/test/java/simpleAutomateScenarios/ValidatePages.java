@@ -15,7 +15,8 @@ public class ValidatePages {
 		
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sony\\eclipse-workspace\\SeleniumDemo\\Drivers\\chromedriver.exe");
 		driver=new ChromeDriver();
-
+		String msg=driver.findElement(By.xpath("//table[1]/tbody/tr/td/strong ")).getText();
+		Assert.assertEquals(msg,"Sorry, access to NetBanking has been disabled.");
 		driver.get("http://google.com");
 		WebElement loginBtn=driver.findElement(By.xpath("//button[contains(text(),'Login')]"));
 		Assert.assertTrue(loginBtn.isDisplayed());

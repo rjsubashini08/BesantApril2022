@@ -15,9 +15,9 @@ public class ExcelExample{
 	
 @Test(dataProvider="testdata")
 public void demoClass(String username, String password) throws InterruptedException {
-	System.setProperty("webdriver.chrome.driver", "C:\\Users\\Sony\\git\\PracticeDemo\\MavenDemSelArtifact\\src\\test\\resources\\driver\\chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", "C:\\Users\\HP\\eclipse-workspace\\SeleniumMarchBatchProj\\Drivers\\chromedriver.exe");
 	driver=new ChromeDriver();//Launch the Chrome Browser
-	Thread.sleep(5000);
+	Thread.sleep(2000);
 	System.out.println("Browser launched");
 driver.manage().window().maximize();//Maximize the chrome browser
 driver.get("https://www.browserstack.com/users/sign_in");
@@ -38,7 +38,7 @@ driver.quit();
 } 
 @DataProvider(name="testdata")
 public Object[][] testDataExample(){
-ReadExcelFile configuration = new ReadExcelFile("C:\\Users\\Sony\\git\\PracticeDemo\\MavenDemSelArtifact\\dataDemo.xlsx");
+ReadExcelFile configuration = new ReadExcelFile("C:\\Users\\HP\\eclipse-workspace\\SeleniumMarchBatchProj\\dataDemo.xlsx");
 int rows = configuration.getRowCount(0);
 Object[][] signin_credentials = new Object[rows][2];
 

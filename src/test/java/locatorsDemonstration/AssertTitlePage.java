@@ -24,8 +24,9 @@ public class AssertTitlePage {
 		Thread.sleep(2000);
 		driver.findElement(By.id("login")).click();
 		Thread.sleep(2000);
-		
 		String titleVal=driver.getTitle();
+		if(titleVal.equals(titleVal))
+		
 		System.out.println(titleVal);
 		Assert.assertEquals(titleVal, "TestProject Demo");
 		driver.close();
