@@ -3,12 +3,18 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="dynamicObjects.Ajaxdemo">
+      <class name="testNGDemo.AssertionDemo">
         <methods>
-          <include name="test_AjaxExample"/>
-          <include name="setUp"/>
+          <include name="testMethod13"/>
+          <include name="testMethod2"/>
+          <include name="testMethod8"/>
+          <include name="testMethod9"/>
+          <include name="testMethod11"/>
+          <include name="testMethod6"/>
+          <include name="testMethod12"/>
+          <include name="testMethod3"/>
         </methods>
-      </class> <!-- dynamicObjects.Ajaxdemo -->
+      </class> <!-- testNGDemo.AssertionDemo -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
